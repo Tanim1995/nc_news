@@ -1,3 +1,6 @@
+*{
+  text-align: center;
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -80,6 +83,7 @@ border-bottom: 1px solid #000000;
   .button{
     background-color: #c44f4f;
     margin: 5px;
+    text-align: center;
   }
 
   ul {
@@ -87,3 +91,237 @@ border-bottom: 1px solid #000000;
     margin: 0;
     padding: 0;
   }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #root {
+    padding: 1rem;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+  }
+
+  .nav-bar a {
+    margin: 5px 0;
+  }
+
+  .header-bar {
+    padding: 5px 10px;
+  }
+
+  .box {
+    padding: 5px;
+  }
+  
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  margin: 1em auto;
+  max-width: 100%;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-bar {
+  background-color: #c44f4f;
+  padding: 10px 20px;
+  border-bottom: 1px solid #000000;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #f4f2f2;
+  padding: 10px 15px;
+  margin: 5px 10px;
+  border-radius: 4px;
+}
+
+.nav-bar a:hover {
+  background-color: #e0e0e0;
+}
+
+.box {
+  border: 1px solid #d31b1b;
+  padding: 10px;
+  margin: 10px 0;
+  overflow: hidden;
+  text-align: left;
+}
+
+.button {
+  background-color: #c44f4f;
+  margin: 5px;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #a33f3f;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  #root {
+    padding: 1rem;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav-bar a {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .box {
+    padding: 5px;
+    
+      text-align: center;
+    
+  }
+
+  .button {
+    padding: 8px;
+    text-align: center;
+  }
+
+  .article-title {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .header {
+    font-size: 2rem;
+    padding:0%;
+    margin: 0%;
+    border: none;
+  }
+}
+
+
+@media only screen and (min-width: 600px) {
+  .nav-bar {
+    flex-direction: row;
+  }
+
+  .nav-bar a {
+    margin: 5px;
+    padding: 10px 15px;
+  }
+
+  .box {
+    margin: 10px auto;
+    max-width: 100%;
+   
+      text-align: center;
+    
+  }
+
+  .article-title {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .header {
+    font-size: 3rem;
+  }
+
+  .button {
+    padding: 8px;
+    text-align: center;
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  .nav-bar a {
+    padding: 10px 20px;
+  }
+
+  .article-title {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .header {
+    font-size: 4rem;
+  }
+  .button {
+    padding: 8px;
+    text-align: center;
+  }
+}
+
+
+@media only screen and (min-width: 992px) {
+  .nav-bar a {
+    padding: 10px 25px;
+  }
+
+  .article-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .header {
+    font-size: 2rem;
+  }
+  .button {
+    padding: 8px;
+    text-align: center;
+  }
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .nav-bar a {
+    padding: 10px 30px;
+  }
+
+  .header {
+    font-size: 2rem;
+  }
+
+  .article-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .button {
+    padding: 8px;
+    text-align: center;
+  }
+}
