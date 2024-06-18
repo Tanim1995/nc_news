@@ -5,6 +5,8 @@ import './App.css'
 import Articles from '../components/Articles'
 import Header from '../components/Header'
 import { Routes, Route } from 'react-router-dom'
+import Article from '../components/Article'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +16,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/articles" element={<Articles />} />
+        <Route path="/articles/:article_id" element={<Article />} />
         
 
         

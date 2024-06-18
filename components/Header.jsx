@@ -3,7 +3,7 @@ const Header = ()=>{
     return (
         <header className= "header-bar">
         <nav className="nav-bar">
-             <Link to= "/articles">Articles</Link>
+             <Link to= "/articles" className="header">Articles</Link>
              
         </nav>
 
