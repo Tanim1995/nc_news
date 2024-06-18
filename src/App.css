@@ -91,30 +91,12 @@ border-bottom: 1px solid #000000;
     margin: 0;
     padding: 0;
   }
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  #root {
-    padding: 1rem;
+  .header{
+    text-align: center;
   }
 
-  .nav-bar {
-    flex-direction: column;
-  }
-
-  .nav-bar a {
-    margin: 5px 0;
-  }
-
-  .header-bar {
-    padding: 5px 10px;
-  }
-
-  .box {
-    padding: 5px;
-  }
   
-}
+
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
@@ -170,7 +152,7 @@ border-bottom: 1px solid #000000;
   margin: 5px;
   color: white;
   border: none;
-  padding: 10px;
+  padding: 0px;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -257,7 +239,7 @@ img {
     text-align: center;
   }
   .header {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .button {
@@ -278,7 +260,7 @@ img {
   }
 
   .header {
-    font-size: 4rem;
+    font-size: 2.8rem;
   }
   .button {
     padding: 8px;
@@ -324,4 +306,8 @@ img {
     padding: 8px;
     text-align: center;
   }
+}
+
+.comment-box{
+  background-color: #d31b1b;
 }
