@@ -1,10 +1,15 @@
-
+import { Link } from "react-router-dom"
 const Header = ()=>{
     return (
-        <header>
+        <header className= "header-bar">
+        <nav className="nav-bar">
+             <Link to= "/articles">Articles</Link>
+             
+        </nav>
 
-
-        </header>
+       
+        
+    </header>
     )
 }
 export default Header
