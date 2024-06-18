@@ -4,20 +4,21 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Articles from '../components/Articles'
 import Header from '../components/Header'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <section>
-      <Header>
+      <Header />
       <Routes>
         <Route path="/articles" element={<Articles />} />
         
 
         
         </Routes>
-      </Header>
+    
     </section>
   )
 }
