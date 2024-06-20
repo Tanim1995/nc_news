@@ -2,37 +2,32 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Article from "./Article";
 import { useNavigate } from "react-router-dom";
+import { getArticles } from "../utils/api";
 
-console.log("check");
+
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
   const navigate = useNavigate();
-
-  console.log("check");
+    console.log(articles,"<<<<<<<<<<<< articles");
+  
 
   useEffect(() => {
-    axios
-      .get("https://nc-news-api-4.onrender.com/api/articles")
-      .then((response) => {
-    
-        setArticles(response.data.articles);
+    getArticles()
+      .then((article) => {
+        setArticles(article.data.articles);
       })
       .catch((error) => {
-        console.error("Error fetching the articles:", error);
+        console.error("Error fetching the comment:", error);
       });
   }, []);
 
-
-const handleClick = (article_id)=>{
+  const handleClick = (article_id) => {
     navigate(`/articles/${article_id}`);
 
-}
+    console.log(articles,"<<<<<<<<<<<<<articles at thee end");
 
-
-
-
-
+  };
 
   return (
     <div>
@@ -46,13 +41,18 @@ const handleClick = (article_id)=>{
               <p>Topic: {article.topic}</p>
               <p>Written by: {article.author}</p>
               <p>{article.category}</p>
-              <button className="button" onClick={() => handleClick(article.article_id)}>Read More...</button>
-            
+              <button
+                className="button"
+                onClick={() => handleClick(article.article_id)}
+              >
+                Read More...
+              </button>
             </div>
           </li>
         ))}
-      </ul> 
-       <Article />
+      </ul>
+      
+      <Article articles={articles}/>
     </div>
   );
 };
