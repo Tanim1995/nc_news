@@ -7,17 +7,18 @@ const Votes = ({ article_id, setArticle, article, articles }) => {
   const [voted, setVoted] = useState(false);
   const [tempVotes, setTempVotes] = useState(null);
   const [num, setNum] = useState(0);
-  const [err, setErr] = useState("there is a problem")
+  const [err, setErr] = useState(null)
   
 
-  console.log(article);
-
+ 
   const handleUpVote = () => {
     setTempVotes((currentVotes) => {
         setVoted(true)
       return currentVotes + 1;
-    });
-    upVoteCount(article_id);
+    })
+upVoteCount(article_id);
+ 
+    
   };
   const handleDownVote = () => {
     setTempVotes((currentVotes) => {
@@ -29,7 +30,7 @@ const Votes = ({ article_id, setArticle, article, articles }) => {
 
   useEffect(() => {
     setTempVotes(article.votes);
-  }, [article.votes]);
+  }, [article.votes])
   return (
     <div>
       <button onClick={handleUpVote} disabled={voted}>

@@ -28,7 +28,7 @@ const Article = ({articles}) => {
       <p>{article.body}</p>
       <p>Written by: {article.author}</p>
       <p>Topic: {article.topic}</p>
-      <p>Votes: {article.votes}</p>
+      
 
       <Votes article={article} article_id={article_id}/>
   

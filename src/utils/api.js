@@ -37,14 +37,23 @@ const upVote = { inc_votes: 1 };
 export const downVoteCount = (article_id) => {
     const downVote = { inc_votes: -1 };
     return newsApi.patch(`/articles/${article_id}`, downVote).then((response)=>{
-        console.log(response);
+        
         return response.data.article
     })
 }
 
 
 
+export const postComment = (article_id, comment) => {
+    const commentData = { userName: "jessjelly", body: comment}
 
+    return newsApi.post(`/articles/${article_id}/comments`, commentData).then((response)=>{
+
+        console.log(response)
+        return response.data
+
+    })
+}
 
 
 export const getArticles = () => {
